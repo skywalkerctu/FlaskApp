@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Users {% endblock %}</h1>
+    {% for user in users %}
+        <div class='user'>
+            <h3>{{ user['username'] }}</h3>
+            <p>{{ user['password'] }}</p>
+            <p>{{ user['firstname'] }}</p>
+            <p>{{ user['lastname'] }}</p>
+            <p>{{ user['email'] }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
